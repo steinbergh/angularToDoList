@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<div class="container">
+		<form class="form-inline" role="form">
+			<h1>{{ greeting }}:</h1>
+			<input type="text" class="form-control form-inline" placeholder="To Do" ng-model="ToDo"></input>
+		<button class="btn btn-primary" ng-click="addToDo(ToDo)" ng-model="ToDo">Add To-Do</button>
+		</form>
+	</div>
+	<div>
+		<ul>
+			<li ng-repeat="items in toDo">{{ items.item }}  <button class="btn btn-default btn-xs" ng-click="remove()">x</button></li>
+		</ul>
+	</div>
+</body>
+</html>
